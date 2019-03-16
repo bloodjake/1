@@ -1,5 +1,11 @@
 package newpacage
 
 fun main(args: Array<String>) {
-    println("hello world")
+    if (args.isEmpty()){
+        println("no args")
+    }else{
+        for (arg in args) {
+            println(arg)
+        }
+    }
 }
