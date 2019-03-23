@@ -1,17 +1,19 @@
 package newpacage
 
 fun main(args: Array<String>) {
+    val status: Int
     when {
         args.isEmpty() -> {
             println("no args")
-            System.exit(0)
+            status = 0
         }
-        args.size == 1 -> System.exit( 1)
-        args.size == 2 -> System.exit( 2)
+        args.size == 1 -> status = 1
+        args.size == 2 -> status = 1
         else -> {
             args.forEach { println(it) }
-            System.exit(100)
+            status = 100
         }
     }
+    System.exit(status)
 }
 
